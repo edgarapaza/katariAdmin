@@ -3,6 +3,7 @@
 class View
 {
   public $mensaje;
+  public $datos;
 
   function __construct()
   {
@@ -12,5 +13,10 @@ class View
   function Render($nombre)
   {
     require 'views/' . $nombre . '.php';
+  }
+
+  function RenderAdmin($nombre)
+  {
+    require 'admin/' . $nombre . '.php';
   }
 }

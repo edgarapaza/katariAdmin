@@ -1,0 +1,42 @@
+.responsive-blog-footer {
+  background: #535353;
+  padding: 3rem 3rem;
+  color: white;
+}
+@media screen and (max-width: 39.9375em) {
+  .responsive-blog-footer h4 {
+    font-size: 1.5rem;
+  }
+}
+.responsive-blog-footer p {
+  color: #939393;
+}
+.responsive-blog-footer .mailing-list {
+  margin-bottom: 1.5rem;
+}
+.responsive-blog-footer .mailing-container {
+  margin-bottom: 2rem;
+}
+.responsive-blog-footer .about-section, .responsive-blog-footer .tag-section {
+  margin-bottom: 2rem;
+}
+.responsive-blog-footer .about-section a, .responsive-blog-footer .tag-section a {
+  color: #27328F;
+}
+.responsive-blog-footer .subscribe-button {
+  background-color: #27328F;
+}
+.responsive-blog-footer .subscribe-button:hover {
+  background-color: #222b7b;
+  transition: color 0.3s ease-in;
+}
+.responsive-blog-footer .fa-chevron-circle-up {
+  font-size: 3rem;
+  color: #939393;
+}
+.responsive-blog-footer .fa-chevron-circle-up:hover {
+  color: #b9b9b9;
+  transition: color 0.3s ease-in;
+}
+
+/*# sourceMappingURL=footer.css.map */
