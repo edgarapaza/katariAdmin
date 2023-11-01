@@ -31,27 +31,26 @@ class Listado extends Controller
     $apellidos = trim(strtoupper($_POST['apellidos']));
     $sexo      = trim(strtoupper($_POST['sexo']));
     $telefono  = trim(strtoupper($_POST['telefono']));
-    $fecha_nac = trim(strtoupper($_POST['fecha_nac']));
+    $fechanac  = trim(strtoupper($_POST['fechanac']));
     $email     = trim(strtolower($_POST['email']));
     $direccion = trim(strtoupper($_POST['direccion']));
     $dni       = trim(strtoupper($_POST['dni']));
     $foto      = trim(strtolower($_POST['foto']));
 
-    if($this->model->update($nombre,$apellidos,$sexo,$telefono,$fecha_nac,$email,$direccion,$dni,$foto,$idpersonal))
-    {
+    if ($this->model->update($nombre, $apellidos, $sexo, $telefono, $fechanac, $email, $direccion, $dni, $foto, $idpersonal)) {
       $personal = new Personal();
       $personal->nombre = $nombre;
       $personal->apellidos = $apellidos;
       $personal->sexo = $sexo;
       $personal->telefono = $telefono;
-      $personal->fecha_nac = $fecha_nac;
+      $personal->fechanac = $fechanac;
       $personal->email = $email;
       $personal->direccion = $direccion;
       $personal->dni = $dni;
       $personal->foto = $foto;
 
       $this->view->mensaje = "Actualizado correctamente";
-    }else{
+    } else {
       $this->view->mensaje = "Error al actualizar";
     }
 
@@ -60,9 +59,9 @@ class Listado extends Controller
 
   function Delete($param = null)
   {
-     $idpersonal = $param[0];
+    $idpersonal = $param[0];
 
-     $this->model->delete($idpersonal);
+    $res = $this->model->delete($idpersonal);
 
     $this->view->datos = $res;
     $this->view->Render('dashboard/index');

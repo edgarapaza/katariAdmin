@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.lateral {
+  background-color: #2B3741;
+  padding: 20px;
+  height: 100vh;
+}
+.lateral #menu #left ul {
+  list-style: none;
+  padding: 20px 0px 20px 0px;
+}
+.lateral #menu #left ul li {
+  padding: 10px 0px 10px 0px;
+  margin-left: 80px;
+}
+.lateral #menu #left ul li a {
+  font-family: "Roboto condensed", sans-serif;
+  font-size: 1.5em;
+  color: #2E8AEC;
+}
+.lateral #menu #left ul li a :hover {
+  font-size: 2em;
+  background-color: #004B6A;
+}
+
+#foot-er {
+  background: #201E1C;
+  color: white;
+  padding-top: 30px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -7,9 +7,9 @@ class LoginModel extends Model
     parent::__construct();
   }
 
-  public function Validar($datos)
+  public function Validar($user, $password)
   {
-    $sql = "SELECT idpersonal,nivusu,chkusu FROM represa.login WHERE email='" . $datos['user'] . "' and passwd = '" . $datos['passw'] . "';";
+    $sql = "SELECT idpersonal,nivusu,chkusu FROM login WHERE username='$user' AND passwd=MD5('$password')";
     $data = $this->conn->ConsultaArray($sql);
     return $data;
   }

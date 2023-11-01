@@ -1,0 +1,49 @@
+$azul-oscuro: #2B3741;
+$azul: #004B6A;
+$azul-claro: #2E8AEC;
+
+body, html {
+  font-family: "Robot", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.header{
+  background-color: $azul-oscuro;
+  color: #E8E8E8;
+  nav{
+    display: flex;
+    align-items: center;
+    .logo{
+      width: 80px;
+      margin-left: 50px;
+    }
+    .derecha{
+      float: right;
+    }
+    ul{
+      li{
+        list-style: none;
+        a{
+          color: white;
+          margin: 0px 30px 0px 3px;
+          :hover{
+            border: 2px solid $azul-claro;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login1{
+  padding: 20px;
+  margin-top: 10px;
+  background-color: $azul;
+  color: white;
+  .katarilogo{
+    float: right;
+  }
+}

@@ -8,7 +8,7 @@
 
   <!-- <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"> -->
   <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/foundation.css">
-  <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/main.css">
+  <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/header.css">
   <!-- If you are using the gem version, you need this only -->
 
   <!-- Insert this within your head tag and after foundation.css -->
@@ -25,45 +25,59 @@
 
   <div class="header">
     <nav>
+      <img src="<?php echo constant('URL') ?>public/img/katariwhite.png" alt="Represa" class="logo">
       <ul>
         <li><a href="<?php echo constant('URL'); ?>login">Inicio</a></li>
+      </ul>
+      <ul class="derecha">
         <li><a href="<?php echo constant('URL'); ?>salir/end">Salir</a></li>
       </ul>
     </nav>
   </div>
 
 
-<div class="grid-container">
-  <div class="grid-x">
-    <div class="cell small-6">
-      <div class="thumbnail imagen">
-        <img src="<?php echo constant('URL')?>public/img/katari.png" alt="Represa">
+  <div class="grid-container-fluid">
+    <div class="grid-x login1">
+      <div class="cell small-6">
+        <img src="<?php echo constant('URL') ?>public/img/katariwhite.png" alt="Katari" id="katarilogo">
+      </div>
+      <div class="cell small-6">
+
+        <h1>Bienvenido</h1>
+        <?php echo $this->mensaje; ?>
+
+        <form method="post" action="<?php echo constant('URL') ?>login/user" name="signup-form">
+          <div class="">
+            <label>Email</label>
+            <input type="text" name="username" id="username" required />
+          </div>
+          <div class="">
+            <label>Password</label>
+            <input type="password" name="passwd" id="passwd" required />
+          </div>
+          <div class="">
+            <label>Recordarme
+              <input type="checkbox" name="recordarme" />
+            </label>
+          </div>
+          <button type="submit" class="button success large" name="btnIngresar" value="btnIngresar">Ingresar</button>
+        </form>
+        <p class="text-center">No tienes cuenta? <a href="#0">Registrate</a></p>
       </div>
     </div>
-    <div class="cell small-6 gris">
-
-      <h1>Bienvenido</h1>
-      <?php echo $this->mensaje; ?>
-
-      <form method="post" action="<?php echo constant('URL') ?>login/user" name="signup-form">
-        <div class="">
-          <label>Email</label>
-          <input type="email" name="email" required value="uno@uno.com" />
-        </div>
-        <div class="">
-          <label>Password</label>
-          <input type="password" name="password" required value="123" />
-        </div>
-        <div class="">
-          <label>Recordarme</label>
-          <input type="checkbox" name="recordarme"/>
-        </div>
-        <button type="submit" class="button success large" name="btnIngresar" value="btnIngresar">Ingresar</button>
-      </form>
-      <p class="text-center">No tienes cuenta? <a href="">Registrate</a></p>
-    </div>
   </div>
-</div>
 
+  </div>
+  </div>
+  </div>
 
-<?php require 'views/footer.php'; ?>
+  <script src="<?php echo constant('URL'); ?>public/js/core/jquery.min.js"></script>
+  <script src="<?php echo constant('URL'); ?>public/js/main.js"></script>
+  <script src="<?php echo constant('URL'); ?>public/js/foundation.min.js"></script>
+
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+
+</html>

@@ -23,13 +23,14 @@ class Conexion
 
   public function ConsultaSin($sql)
   {
-    try {
-        $this->conn->query($sql);
-        $res = TRUE;
-    } catch (Exception $e) {
-        echo 'Excepción: ',  $e->getMessage();
-    }
     # Sirve para: INSERT, UPDATE, DELETE
+    try {
+      $this->conn->query($sql);
+      $res = TRUE;
+    } catch (Exception $e) {
+      echo 'Excepción: ',  $e->getMessage();
+      $res = FALSE;
+    }
 
     return $res;
     mysqli_close($this->conn);
@@ -39,9 +40,9 @@ class Conexion
   {
     # Sirve para: SELECT
     try {
-        $result = $this->conn->query($sql);
+      $result = $this->conn->query($sql);
     } catch (Exception $e) {
-        echo 'Excepción: ',  $e->getMessage();
+      echo 'Excepción: ',  $e->getMessage();
     }
 
     return $result;
@@ -52,9 +53,9 @@ class Conexion
   {
     # Sirve para: SELECT convertido en array
     try {
-        $result = $this->conn->query($sql);
+      $result = $this->conn->query($sql);
     } catch (Exception $e) {
-        echo 'Excepción: ',  $e->getMessage();
+      echo 'Excepción: ',  $e->getMessage();
     }
 
     $data = $result->fetch_array(MYSQLI_ASSOC);
