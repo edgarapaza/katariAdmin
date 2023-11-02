@@ -5,7 +5,7 @@
   <div class="grid-x">
     <div class="cell small-12 large-12">
       <h1>Nuevo blog</h1>
-      <div><?php echo $this->mensaje;?></div>
+      <div><?php echo $this->mensaje; ?></div>
     </div>
   </div>
 
