@@ -5,3 +5,4 @@ function toggleClick() {
   var right = document.querySelector("#right");
   right.classList.toggle("mobile_showing");
 }
+

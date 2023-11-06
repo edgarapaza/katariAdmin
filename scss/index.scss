@@ -2,6 +2,7 @@ $azul-oscuro: #2B3741;
 $azul: #004B6A;
 $azul-claro: #2E8AEC;
 $gris: #201E1C;
+
 *{
 	margin: 0;
 	padding: 0;
@@ -14,26 +15,29 @@ body{
 
 .lateral{
 	background-color: $azul-oscuro;
-	padding: 20px;
   height: 100vh;
   #menu{
 
     #left{
-
+      display: flex;
+      flex-direction: column;
+      .img-logo{
+        margin-top: 10px;
+        align-self: center;
+      }
       ul{
         list-style: none;
-        padding: 20px 0px 20px 0px;
+
         li{
-          padding: 10px 0px 10px 0px;
-          margin-left: 80px;
+          padding: 10px 0px 0px 0px;
+          margin-left: 10px;
           a{
             font-family: "Roboto condensed", sans-serif;
-            font-size: 1.5em;
             color: $azul-claro;
-            :hover{
-              font-size: 2em;
-              background-color: $azul;
-            }
+          }
+          :hover{
+            font-size: 1.1em;
+            background-color: $azul;
           }
         }
       }

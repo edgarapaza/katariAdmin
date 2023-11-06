@@ -10,24 +10,29 @@ body {
 
 .lateral {
   background-color: #2B3741;
-  padding: 20px;
   height: 100vh;
+}
+.lateral #menu #left {
+  display: flex;
+  flex-direction: column;
+}
+.lateral #menu #left .img-logo {
+  margin-top: 10px;
+  align-self: center;
 }
 .lateral #menu #left ul {
   list-style: none;
-  padding: 20px 0px 20px 0px;
 }
 .lateral #menu #left ul li {
-  padding: 10px 0px 10px 0px;
-  margin-left: 80px;
+  padding: 10px 0px 0px 0px;
+  margin-left: 10px;
 }
 .lateral #menu #left ul li a {
   font-family: "Roboto condensed", sans-serif;
-  font-size: 1.5em;
   color: #2E8AEC;
 }
-.lateral #menu #left ul li a :hover {
-  font-size: 2em;
+.lateral #menu #left ul li :hover {
+  font-size: 1.1em;
   background-color: #004B6A;
 }
 

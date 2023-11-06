@@ -67,25 +67,26 @@
         <div id="menu">
           <div id="left">
             <img src="<?php echo constant('URL'); ?>public/img/katariwhite.png" alt="Logo Katari" class="img-logo" width="80px">
-            <span onClick="toggleClick()" class="menu_toggle">
+            <!-- <span onClick="toggleClick()" class="menu_toggle">
               <i class="fa fa-times" aria-hidden="true"></i>
-            </span>
+            </span> -->
             <ul>
               <li>
-                <a href="<?php echo constant('URL'); ?>dashboard">Dashboard</a>
+                <a href="<?php echo constant('URL'); ?>dashboard">Dashboard <i class="fa-solid fa-chevron-right"></i></a>
               </li>
-              <li><a href="<?php echo constant('URL'); ?>blog">Blog</a></li>
-              <li><a href="<?php echo constant('URL'); ?>listado">Usuarios</a></li>
-              <li><a>My Account</a></li>
+              <li><a href="<?php echo constant('URL'); ?>blog">New Blog <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="<?php echo constant('URL'); ?>listado">Usuarios <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="<?php echo constant('URL'); ?>productos">Productos <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="<?php echo constant('URL'); ?>categoria">Categorias <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
           </div>
-          <div id="right">
+          <!-- <div id="right">
             <span onClick="toggleClick()" class="menu_toggle">
               <button class="btn pull_tab">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
               </button>
             </span>
-          </div>
+          </div> -->
         </div>
       </div>
 
