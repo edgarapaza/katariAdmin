@@ -4,16 +4,17 @@
   <div class="grid-x">
     <div class="cell small-12 large-12">
       <h3>Insertar nuevo producto</h3>
+      <div><?php echo $this->mensaje; ?></div>
     </div>
   </div>
 
-  <form action="<?php echo constant('URL'); ?>productos/nuevo" method="post" enctype="multipart/form-data">
+  <form action="<?php echo constant('URL'); ?>productos/insertar" method="post" enctype="multipart/form-data">
     <div class="grid-x grid-padding-x">
       <div class="small-3 cell">
         <label for="nombre" class="text-right middle">Nombre del producto o Software</label>
       </div>
       <div class="small-9 cell">
-        <input type="text" id="nombre" name="nombre" value="Software .." required>
+        <input type="text" id="nombre" name="nombre" value="" required>
       </div>
     </div>
 
@@ -23,11 +24,11 @@
       </div>
       <div class="small-9 cell">
         <textarea name="caracteristicas" id="caracteristicas" cols="30" rows="10" required><ul>
-            <li>Inicio 1</li>
-            <li>Inicio 2</li>
-            <li>Inicio 3</li>
-            <li>Inicio 4</li>
-          </ul></textarea>
+    <li>a</li>
+    <li>b</li>
+    <li>b</li>
+    <li>b</li>
+  </ul></textarea>
       </div>
     </div>
 
@@ -37,7 +38,7 @@
         <label for="categoria" class="text-right middle">Categoria</label>
       </div>
       <div class="small-9 cell">
-        <select name="categoria" id="categoria" required>
+        <select name="idcategoria" id="idcategoria" required>
           <option value="" selected disabled>[Seleccionar]</option>
           <?php
           include_once "models/categorias.php";
@@ -69,7 +70,7 @@
         <label for="preciototal" class="text-right middle">Precio total</label>
       </div>
       <div class="small-3 cell">
-        <input type="number" id="preciototal" name="preciototal" value="2500.00" min="1" max="9999999" required>
+        <input type="number" id="preciototal" name="preciototal" min="1" max="9999999" required>
       </div>
     </div>
 
@@ -87,7 +88,7 @@
             <option value="1">Si</option>
           </select>
           >>
-          <input class="input-group-field" type="number" id="porcentaje" name="porcentaje" value="0" disabled="disabled" placeholder="" required>
+          <input class="input-group-field" type="number" id="porcentaje" name="porcentaje" value="0" disabled="disabled">
           <span class="input-group-label">%</span>
           <div class="input-group-button">
             <input type="button" class="button" name="btnCalcular" id="btnCalcular" value="Calcular" disabled="disabled">

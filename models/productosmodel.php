@@ -9,10 +9,10 @@ class ProductosModel extends Model
     parent::__construct();
   }
 
-  public function Insertar($idcategoria, $imagen, $nombre, $caracteristicas, $preciototal, $preciodsct, $ahorro, $cupon, $cupondsto)
+  public function Insertar($idcategoria, $imagen, $nombre, $caracteristicas, $preciototal, $porcentaje, $preciodsct, $ahorro, $cupon, $cupondsto)
   {
     $fecCreate = date("Y-m-d H:i:s");
-    $sql = "INSERT INTO productos VALUES (NULL,'$idcategoria','$imagen','$nombre','$caracteristicas','$preciototal','$preciodsct','$ahorro','$cupon','$cupondsto','$fecCreate');";
+    $sql = "INSERT INTO productos VALUES (null,'$idcategoria','$imagen','$nombre','$caracteristicas','$preciototal','$porcentaje','$preciodsct','$ahorro','$cupon','$cupondsto','$fecCreate');";
     $data = $this->conn->ConsultaSin($sql);
     return $data;
   }
