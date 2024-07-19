@@ -76,7 +76,6 @@ class App
 
       #echo "Segundo: ".$url[1];
       if (isset($url[1]) && $url[1] == "user") {
-
         $archivoController = "controller/login.php";
         require_once $archivoController;
         $controller = new Login;
@@ -85,7 +84,6 @@ class App
         $controller->render();
       } else {
         #echo "nada";
-
         header("location: " . constant('URL'));
       }
     }

@@ -13,6 +13,12 @@ class LoginModel extends Model
     $data = $this->conn->ConsultaArray($sql);
     return $data;
   }
+  public function Validar1($user, $password)
+  {
+    $sql = "SELECT idpersonal,nivusu,chkusu FROM login WHERE username='$user' AND passwd='$password';";
+    $data = $this->conn->ConsultaArray($sql);
+    return $data;
+  }
 
   public function NombrePersonal($idpersonal)
   {

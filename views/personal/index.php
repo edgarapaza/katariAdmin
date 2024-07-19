@@ -6,7 +6,7 @@
 
       <h4>Nuevo de personal</h4>
       <div id="mensaje"><?php echo $this->mensaje; ?></div>
-      <form action="<?php echo constant('URL'); ?>personal/create" method="post" enctype="multipart/form-data">
+      <form action="<?php echo "http://localhost/katariAdmin/personal/create";?> method="post" enctype="multipart/form-data">
         <div class="grid-container">
           <div class="grid-x grid-padding-x">
             <div class="small-12 medium-6 cell">

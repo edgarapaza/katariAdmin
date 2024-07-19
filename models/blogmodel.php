@@ -12,7 +12,7 @@ class BlogModel extends Model
   {
     $idpersonal = $_SESSION['katari'];
     $fecCreate = date('Y-m-d H:i:s');
-    $sql = "INSERT INTO katari.blog VALUES (null,'$titulo','$descripcion','$contenido','$rutadesrino','$idproyecto','$idpersonal','$fecCreate','$fecCreate');";
+    $sql = "INSERT INTO blog VALUES (null,'$titulo','$descripcion','$contenido','$rutadesrino','$idproyecto','$idpersonal','$fecCreate','$fecCreate');";
 
     $res = $this->conn->ConsultaSin($sql);
     return $res;
@@ -21,7 +21,7 @@ class BlogModel extends Model
   function Listado()
   {
     $items = [];
-    $sql = "SELECT idblog,titulo,descripcion,contenido,imagen,idpersonal,fecCreate FROM katari.blog;";
+    $sql = "SELECT idblog,titulo,descripcion,contenido,imagen,idpersonal,fecCreate FROM blog;";
     $res = $this->conn->ConsultaCon($sql);
 
     while ($row = $res->fetch_array(MYSQLI_ASSOC)) {
